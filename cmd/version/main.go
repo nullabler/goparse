@@ -9,7 +9,7 @@ import (
 func main() {
 	conf, err := version.NewConfig()
 	if err != nil {
-		log.Fatalln("Config error: ", err)
+		log.Fatalln("Config error:", err)
 	}
 
 	collect := version.NewCollect(conf)

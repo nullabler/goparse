@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  app_version:
+  parser:
     build:
       context: ../.
       dockerfile: build/version/Dockerfile
@@ -10,3 +10,13 @@ services:
       - '../.:/app'
     environment:
       HTTP_TIMEOUT_SEC: '${HTTP_TIMEOUT_SEC}'
+      REDIS_ADDR: '${REDIS_ADDR}'
+      REDIS_PASSWORD: '${REDIS_PASSWORD}'
+      SETTING_PATH: '${SETTING_PATH}'
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+
+

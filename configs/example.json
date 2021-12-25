@@ -1,0 +1,7 @@
+[
+    {
+        "id": "php",
+        "url": "https://www.php.net/downloads.php",
+        "regexp": "Current\\s+Stable[^>]+>\\s+PHP\\s+([\\d\\.]+)[^<]+<.+href=\"([^\"]+)"
+    }
+]
